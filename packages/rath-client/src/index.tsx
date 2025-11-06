@@ -21,7 +21,8 @@ import { customLightTheme, mainTheme } from './theme';
 
 inject();
 
-initializeIcons();
+// Initialize icons with empty baseUrl to use bundled fonts instead of CDN (avoids CORS issues)
+initializeIcons('');
 
 ReactDOM.render(
     <ThemeProvider theme={mainTheme}>
